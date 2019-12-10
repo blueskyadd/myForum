@@ -1,0 +1,123 @@
+/* pages/home/home.wxss */
+page{
+  height: 100%;
+}
+.main{
+  background: #f3f5f7;
+  height: 100%;
+}
+/* 轮播图 */
+.page-section{
+  height: 369rpx;
+  margin-bottom: 10rpx;
+}
+.page-section image{
+  width: 100%;
+  height: 100%;
+}
+swiper{
+  height: 369rpx;
+}
+/* 频道列表 */
+
+.channel-list swiper-item{
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+}
+.channel-list swiper-item .list-icon{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.channel-list swiper-item .list-icon wux-icon{
+  color: orangered;
+}
+.channel-list swiper-item .list-icon text{
+  font-size: 22rpx;
+}
+/* 帖子列表 */
+.article-list>view {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15rpx;
+}
+.article-list view .list{
+  margin-bottom: 10rpx;
+  background: #fff;
+  padding: 20rpx 35rpx 35rpx;
+}
+.article-list view .list .article-title{
+  padding-top: 10rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.article-list view .list .article-title image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.article-list view .list .article-title text{
+  font-size: 24rpx;
+  color: #666;
+}
+.article-list view .list .article-title .user-info{
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+}
+.article-list view .list .article-title .user-info text:first-child{
+  padding: 0 15rpx 0 0;
+}
+.article-list view .list .article-title .user-info text:last-child{
+  padding: 0  0 0 15rpx;
+}
+.article-list view .list .article-title .flag{
+  display: flex;
+  margin-top: 10rpx;
+  background: orange;
+  padding: 0 20rpx;
+  color: #fff;
+  float: left;
+  width: auto;
+  font-size: 22rpx;
+  border-radius: 10%;
+}
+.article-list view .list  .article-content{
+  font-size: 26rpx;
+  line-height: 34rpx;
+  color: #333;
+}
+.article-list view .list .article-img{
+  display: flex;
+  width: 100%;
+  margin-top: 25rpx;
+  overflow: hidden;
+   height: 250rpx;
+   align-items: center;
+   border-radius: 10rpx;
+}
+.article-list view .list .imageList{
+  overflow:auto;
+  height: auto;
+  flex-wrap: wrap;
+}
+.article-list view .list .article-img .templateOne{
+  width: 100%;
+  /* height: 100%; */
+}
+.article-list view .list  .article-content wux-image{
+  margin: 5rpx;
+}
+.article-list view .list  .article-content>text{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}

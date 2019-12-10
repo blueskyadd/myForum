@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "wux-upload": "../../dist/upload/index",
+    "wux-icon": "../../dist/icon/index",
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cascader": "../../dist/cascader/index",
+    "wux-textarea": "../../dist/textarea/index",
+    "wux-select": "../../dist/select/index",
+    "wux-button": "../../dist/button/index",
+    "wux-toast": "../../dist/toast/index"
+  }
+}

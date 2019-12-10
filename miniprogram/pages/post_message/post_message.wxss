@@ -1,0 +1,100 @@
+/* miniprogram/pages/post_message/post_message.wxss */
+.post_message{
+ overflow-y: scroll;
+ height: 100%;
+}
+.post_message .post_main{
+  background: #fff;
+  padding: 20rpx 35rpx;
+}
+
+.post_message .post_main textarea{
+  width: 100%;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 30rpx;
+}
+.post_message .list-img {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+  /* justify-content: space-between; */
+}
+.post_message .list-img .img-uploadList{
+  width: 200rpx;
+  height: 200rpx;
+  border: 1px dashed #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 8rpx;
+  margin: 12.6rpx;
+}
+.post_message .list-img .img-uploadList wux-icon{
+  position: absolute;
+  top: -18rpx;
+  right: -18rpx;
+  color: orangered;
+  background: #fff;
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+
+}
+.post_message .list-img .img-uploadList image{
+  width: 90%;
+  height: 90%;
+  border-radius: 8rpx;
+}
+.post_message .list-img .upload{
+  background: #eee;
+  width: 200rpx;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8rpx;
+  margin: 14rpx;
+}
+.post_message .list-img .upload image{
+  width: 70%;
+  height: 70%;
+}
+.page__bd{
+  padding-bottom: 220rpx;
+}
+.page__bd .cityChange{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+  border-bottom: 1px solid #ddd;
+  margin: 0 35rpx;
+}
+.page__bd .cityChange .changeTitle{
+  font-size: 32rpx;
+  color: #333;
+}
+.page__bd .cityChange .changeTitle wux-icon{
+  margin-right: 15rpx;
+  
+}
+.page__bd .cityChange>text{
+  font-size: 32rpx;
+  color: #888;
+  max-width: 330rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.footerSubmit{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.footerSubmit button{
+  margin-top: 0;
+  margin-bottom: 0;
+}

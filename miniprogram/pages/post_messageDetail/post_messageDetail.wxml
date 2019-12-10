@@ -1,0 +1,34 @@
+<!--miniprogram/pages/post_messageDetail/post_messageDetail.wxml-->
+<view class="blogDetail">
+  <view class="mainText">
+    <view class="DetailTitle">
+      <view class="Image"><image src='{{blogDetail.avatarUrl}}'></image></view>
+      <view class="userInfo">
+        <text>{{blogDetail.nickName}}</text>
+        <text>{{blogDetail.createTime}}</text>
+      </view>
+    </view>
+    <text>{{blogDetail.contentText}}</text>
+    <view class="ImgList">
+      <image wx:for="{{blogDetail.fileList}}" bindtap="onPreview" data-url='{{item.url}}' data-fileList='{{blogDetail.fileList}}' src="{{item.url}}"></image>
+    </view>
+  </view>
+  <view class="commentList">
+      <view class="commentTitle">评论</view>
+       <view class="commentDetail">
+        <view class="mainUserInfo">
+            <view class="Image"><image src='https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2394972844,3024358326&fm=26&gp=0.jpg'></image></view>
+            <view class="userInfo">
+              <text>用户名</text>
+              <text>4584-48-45 45:45</text>
+            </view>
+        </view>
+        <text class="contentText">嗯哼，看起来不错哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈哈哈</text>
+        <view class="imgList">
+          <image bindtap="onPreview" data-url='https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2394972844,3024358326&fm=26&gp=0.jpg' src='https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2394972844,3024358326&fm=26&gp=0.jpg'></image>
+        </view>
+       </view>
+       <view class="bottomText commentTitle">已加载全部评论</view>
+    </view>
+    <wux-fab-button position="bottomRight" bind:click="onClick" direction='vertical' theme="assertive"  spaceBetween="15"  buttons="{{ buttons }}" />
+</view>

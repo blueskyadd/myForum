@@ -1,0 +1,47 @@
+<wux-toptips id="wux-toptips" />
+<view class="post_message">
+  <view class="post_content">
+    <view class="post_main">
+      <wux-textarea hasCount rows="3" controlled bind:change="changeContentText" value="{{contentText}}" cursorSpacing="80" maxlength="600" placeholder="要发布的内容..." />
+      <view class="list-img">
+        <view wx:for="{{fileList}}" class="img-uploadList">
+          <wux-icon type="ios-close-circle-outline" data-file='{{item}}' data-fileList='{{fileList}}' backgroundColor="#fff" bindtap="onRemove" size="25"/>
+          <image bindtap="onPreview" data-url='{{item.url}}' data-fileList='{{fileList}}' src="{{item.url}}"></image>
+        </view>
+        <view class="upload" bindtap="doUpload">
+          <image src="../../images/addLu.png"></image>
+        </view>
+      </view>
+    </view>
+     <view class="page__bd">
+        <wux-cell-group title="发布信息">
+            <view class="cityChange" bindtap="onOpen1">
+              <view class="changeTitle">
+                <wux-icon type="ios-pin" color="orangered" size="20"/>
+                <text>请选择您的位置信息</text>
+              </view>
+              <text>{{cityData}}</text>
+            </view>
+            <view class="cityChange" bindtap="channelChange">
+              <view class="changeTitle">
+                <wux-icon type="ios-keypad" color="orangered" size="20"/>
+                <text>请选择发布频道</text>
+              </view>
+              <text>{{channelName}}</text>
+            </view>
+            <!-- <view class="cityChange" bindtap="onOpen1">
+              <view class="changeTitle">
+                <wux-icon type="ios-star" color="orangered" size="20"/>
+                <text>请选择内容标签(可不选)</text>
+              </view>
+              <text>{{cityData}}</text>
+            </view> -->
+        </wux-cell-group>
+    </view>
+    <view class="footerSubmit">
+      <wux-button block loading="{{isLoading}}" bind:click="submitMain" type="{{contentText && fileList.length &&channelName&&cityData ? 'assertive':'dark' }}">发布</wux-button>
+    </view>
+    <wux-cascader visible="{{ visible1 }}" default-value="{{ value1 }}" title="所在地区" options="{{ options1 }}" bind:close="onClose1" bind:change="onChange1" />
+    <wux-select id="wux-channel" />
+  </view>
+</view>

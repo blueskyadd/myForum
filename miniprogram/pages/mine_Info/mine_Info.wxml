@@ -1,0 +1,32 @@
+<!--pages/home/home.wxml-->
+<view class='home_main'>
+  <view class="titleBg">
+    <image class="imgBg" src="../../images/myBg.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+    <view class="main">
+      <view class="title" >
+        <text selectable="false" space="false" decode="false">我的</text>
+      </view>
+      <view class="portrait">
+        <image src="{{avatarUrl}}" />
+        <view class="main_title">
+          <text class="userName" selectable="false" space="false" decode="false">{{nickName}}</text>
+          <text class="phone"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="main_box">
+    <view class="blogData">
+      <view><text>{{blogNumber}}</text><text>贴子数</text></view>
+      <view><text>{{information}}</text><text>消息</text></view>
+      <view><text>{{likeNumber}}</text><text>点赞数</text></view>
+    </view>
+    <view class="blogmethods">
+      <view><wux-icon type="ios-analytics" size="20" />我的帖子</view>
+      <view><wux-icon type="ios-text" size="20" />我的消息</view>
+      <view><wux-icon type="ios-star" size="20" />我的收藏</view>
+      <view  bindtap="goPostMessage"><wux-icon size="20" type="ios-add-circle-outline" />发帖</view>
+    </view>
+  </view>
+</view>
+<!-- <wux-button block bindtap="goPostMessage"  type="assertive">发帖</wux-button> -->

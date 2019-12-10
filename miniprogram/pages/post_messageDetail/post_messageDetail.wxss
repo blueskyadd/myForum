@@ -1,0 +1,114 @@
+/* miniprogram/pages/post_messageDetail/post_messageDetail.wxss */
+page{
+  height: 100%;
+}
+.blogDetail{
+  height: 100%;
+}
+.blogDetail .mainText{
+  height: auto; 
+  background: #fff;
+  padding: 35rpx;
+  margin-bottom: 35rpx;
+}
+.blogDetail .mainText .DetailTitle{
+  display: flex;
+  margin-bottom: 35rpx;
+}
+.blogDetail .mainText .DetailTitle .Image{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15rpx;
+}
+.blogDetail .mainText .DetailTitle .Image image{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+}
+.blogDetail .mainText .DetailTitle .userInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #333;
+}
+.blogDetail .mainText>text{
+  font-size: 28rpx;
+  padding-top: 35rpx;
+  color: #333;
+  line-height: 36rpx;
+}
+.blogDetail .mainText .ImgList{
+  width: 100%;
+  padding-top: 35rpx;
+}
+.blogDetail .mainText .ImgList image{
+  margin: 5rpx 0;
+  width: 100%;
+  border-radius: 10rpx;
+}
+/* 评论 */
+.commentList{
+  background: #fff;
+  
+}
+.commentList .commentTitle{
+  font-size: 28rpx;
+  color: #777;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #eee;
+}
+.commentList  .commentDetail{
+  padding: 35rpx ;
+}
+.commentList  .commentDetail .mainUserInfo{
+  display: flex;
+  padding-bottom: 15rpx;
+}
+.commentList  .commentDetail .mainUserInfo .Image{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15rpx;
+}
+.commentList  .commentDetail .mainUserInfo .Image image{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+
+}
+.commentList  .commentDetail .mainUserInfo .userInfo{
+  font-size: 26rpx;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+}
+.commentList  .commentDetail .contentText{
+  font-size: 26rpx;
+  color: #444;
+  text-indent: 10rpx;
+}
+.commentList  .commentDetail .imgList{
+  display: flex;
+  width: 100%;
+  padding-top: 15rpx;
+}
+.commentList  .commentDetail .imgList image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+.bottomText{
+  background: #f6f6f6;
+}

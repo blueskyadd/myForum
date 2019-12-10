@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    
+    "wux-icon": "../../dist/icon/index",
+    "wux-image": "../../dist/image/index",
+    "wux-skeleton": "../../dist/skeleton/index",
+    "wux-skeleton-avatar": "../../dist/skeleton-avatar/index",
+    "wux-skeleton-paragraph": "../../dist/skeleton-paragraph/index"
+  },
+  "navigationStyle": "custom"
+}

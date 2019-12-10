@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wux-fab-button": "../../dist/fab-button/index"
+  },
+  "navigationBarTitleText": "帖子详情"
+}

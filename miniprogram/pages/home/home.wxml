@@ -1,0 +1,50 @@
+<view class="main">
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="true" indicator-color='rgba(255, 255, 255, .5)' indicator-active-color='#19cbff' autoplay="true" interval="3000" circular='false' duration="1000">
+      <block wx:for="{{imgUrls}}"  wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="channel-list">
+    <swiper>
+        <block>
+          <swiper-item>
+             <view class="list-icon" wx:for="{{channel_list}}" wx:key="*this">
+                <wux-icon type="{{item.type}}" style="color:{{item.color}}" />
+                <text>{{item.name}}</text>
+             </view>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+  <view class="article-list">
+    <view>
+      <view class="list" bindtap="goPostMessageDetail" data-id="{{item._id}}" wx:for="{{postList}}">
+        <view class="article-title">
+          <image src="{{item.avatarUrl}}" alt=""/>
+          <view class="user-info">
+            <view>
+              <text>{{item.nickName}}</text>|<text>2019-12-03 12:00</text>
+            </view>
+            <view class="flag">标签</view>
+          </view>
+        </view>
+        <view class="article-content">
+          <wux-skeleton active wx:if="{{isShow}}">
+              <wux-skeleton-paragraph rounded />
+          </wux-skeleton>
+          <text>{{item.contentText}}</text>
+          <view class="article-img"  wx:if="{{item.fileList.length === 1}}">
+            <image class="templateOne" src="{{item.fileList[0].url}}" ></image>
+          </view>
+          <view class="article-img imageList"   wx:else>
+            <wux-image wx:for="{{item.fileList}}" wux-class="image" shape="rounded" loading='loading...' width="120px" height ='120px' mode='center' src="{{item.url}}" />
+          </view>
+      </view>
+      </view>
+    </view>
+  </view>
+</view>
