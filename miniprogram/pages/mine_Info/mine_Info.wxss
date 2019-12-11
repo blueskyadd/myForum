@@ -55,14 +55,24 @@ page{
 .titleBg .portrait .phone{
     line-height: 36rpx;
 }
+.main_box{
+  margin: -35rpx 35rpx 0 0;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx 0;
+  position: absolute;
+  width:calc(100% - 70rpx);
+  height: calc(100% - 400rpx);
+  left: 35rpx;
+}
 .main_box .blogData{
   display: flex;
-  height: 180rpx;
+  height: 100rpx;
   align-items: center;
 }
 .main_box .blogData view{
   flex:1;
-  height: 120rpx;
+  height: 60rpx;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,13 +88,25 @@ page{
   margin-bottom: 10rpx;
 }
 .main_box .blogmethods{
-  padding: 0 35rpx;
+  padding: 35rpx;
 }
 .main_box .blogmethods view{
   height: 100rpx;
-  border-bottom: 1px solid #ccc;
   display: flex;
   align-items: center;
+  position: relative;
+}
+.main_box .blogmethods view:after{
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  height: 0;
+  content: '';
+  bottom: 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-bottom: 1px solid #E4E7ED;
 }
 .main_box .blogmethods view wux-icon{
   color: orangered;
